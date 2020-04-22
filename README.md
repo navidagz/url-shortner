@@ -18,7 +18,7 @@ You have detailed stats and analytics over your urls.
 
 <br>
 
-### Manual:
+### Manual for development:
 1. First of all edit file `.env` in root directory of project and put your credentials there.
 2. Make sure you have `python3.6` and `virtualenv` installed
 3. Create an virtualenv ```virtualenv venv```
@@ -28,7 +28,7 @@ You have detailed stats and analytics over your urls.
 7. Install requirements  ```pip install -r requirements.txt```
 8. Run celery worker ```celery -A url_shortener worker --loglevel=debug ```
 9. Run celery beat ```celery -A url_shortener beat --loglevel=DEBUG```
-10. Run project ```gunicorn url_shortener.wsgi:application --name="url_shortener" --workers=3 --log-level=debug -b 0.0.0.0:8700```
+10. Run project ```gunicorn url_shortener.wsgi:application --name="url_shortener" --workers=3 --log-level=debug -b 0.0.0.0:8008```
 11. Import Postman collection to see the apis [UrlShortener](https://www.getpostman.com/collections/552044886e3e16075e0c)
 
 <br>
@@ -47,7 +47,7 @@ You have detailed stats and analytics over your urls.
 RRequests: 0, requests per second: 0, mean latency: 0 ms
 Requests: 5515, requests per second: 1105, mean latency: 9 ms
 
-Target URL:          http://0.0.0.0:8700/navidagz/
+Target URL:          http://0.0.0.0:8008/navidagz/
 Max time (s):        10
 Concurrency level:   10
 Agent:               keepalive
@@ -71,7 +71,7 @@ Requests: 11506, requests per second: 1198, mean latency: 8.3 ms
 Requests: 0, requests per second: 0, mean latency: 0 ms
 Requests: 1071, requests per second: 214, mean latency: 46.4 ms
 
-Target URL:          http://0.0.0.0:8700/api/v1/shortener/
+Target URL:          http://0.0.0.0:8008/api/v1/shortener/
 Max time (s):        10
 Concurrency level:   10
 Agent:               keepalive
