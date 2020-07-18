@@ -138,13 +138,13 @@ class Device(models.Model):
     Device Model
     """
     DESKTOP = "Desktop"
-    MOBILE = "Desktop"
+    MOBILE = "Mobile"
     OTHER = "Other"
 
     DEVICE_TYPES = (
-        (DESKTOP, "Desktop"),
-        (MOBILE, "Mobile"),
-        (OTHER, "Other")
+        (DESKTOP, DESKTOP),
+        (MOBILE, MOBILE),
+        (OTHER, OTHER)
     )
 
     device_type = models.CharField(max_length=7, choices=DEVICE_TYPES)
