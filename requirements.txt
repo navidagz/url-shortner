@@ -1,9 +1,9 @@
-coverage==4.5.3
-djangorestframework==3.9.3
-django==2.2.*
+coverage
+djangorestframework
+django==3.2.*
 djangorestframework-simplejwt
 python-decouple
-django-jet==1.0.8
+django-3-jet
 django-cors-headers
 Pillow
 django-rest-auth
